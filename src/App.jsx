@@ -1,14 +1,12 @@
 import { useState } from 'react'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Homepage from './pages/Homepage'
+import MainLayout from './layouts/MainLayout'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-    
-    </>
+    <Homepage/>
   )
 }
 
