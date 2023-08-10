@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "title": "Mendoza, Argentina",
+        "scr": "/Carrusel_Img/Mendoza_Img.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Bangkok, Thailand",
+        "scr": "/Carrusel_Img/Bangkok_Img.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Petra, Jordan",
+        "scr": "/Carrusel_Img/Petra_Img.JPG"
+    },
+    {
+        "id": 4,
+        "title": "Rome, Italy",
+        "scr": "/Carrusel_Img/Roma_Img.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Dubai, United Arab Emirates",
+        "scr": "/Carrusel_Img/Dubai_Img.jpg"
+    },
+    {
+        "id": 6,
+        "title": "London, United Kingdom",
+        "scr": "/Carrusel_Img/London_Img.jpg"
+    },
+    {
+        "id": 7,
+        "title": "Paris, France",
+        "scr": "/Carrusel_Img/Paris_Img.jpg"
+    },
+    {
+        "id": 8,
+        "title": "Yucatán, Mexico",
+        "scr": "/Carrusel_Img/Yucatán_Img.jpg"
+    },
+    {
+        "id": 9,
+        "title": "Havana, Cuba",
+        "scr": "/Carrusel_Img/Cuba_Img.jpg"
+    },
+    {
+        "id": 10,
+        "title": "Berlin, Germany",
+        "scr": "/Carrusel_Img/Berlin_Img.jpg"
+    },
+    {
+        "id": 11,
+        "title": "New York, United States",
+        "scr": "/Carrusel_Img/NewYork_Img.jpg"
+    },
+    {
+        "id": 12,
+        "title": "Rio de Janeiro, Brazil",
+        "scr": "/Carrusel_Img/Brasil_Img.jpg"
+    }
+]

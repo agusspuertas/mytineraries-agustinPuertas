@@ -7,8 +7,8 @@ function Header() {
 
     {/* Menu */}
       <div className='menu hidden md:block'>
-        <a className='m-3 btn-ghost rounded-lg p-1' href="#">Home</a>
-        <a className='m-3 btn-ghost rounded-lg p-1' href="#">Cities</a>
+        <a className='m-3 text-lg btn-ghost rounded-lg p-1' href="#">Home</a>
+        <a className='m-3 text-lg btn-ghost rounded-lg p-1' href="#">Cities</a>
       </div>
 
 
@@ -28,7 +28,7 @@ function Header() {
 
     {/* Titulo */}
       <div className=''>
-        <a className="font-amatica font-bold btn btn-ghost normal-case text-5xl">MyTinerary</a>
+        <a className="font-amatica font-bold btn btn-ghost normal-case text-5xl">MyTineraries</a>
       </div>
 
 
@@ -39,7 +39,7 @@ function Header() {
           <img src="/Header_Img/UserLogo.png" alt="user logo" />
         </div>
       </div>
-
+      
     </div>
   )
 }
