@@ -1,0 +1,77 @@
+[
+    {
+        "nombre": "Buenos Aires",
+        "pais": "Argentina",
+        "imagen": "https://cloudfront-us-east-1.images.arcpublishing.com/infobae/Q65VXWNN2FEVNN4QOLAKSC7J5E.jpg"
+    },
+    {
+        "nombre": "Cordoba",
+        "pais": "Argentina",
+        "imagen": "https://media.viajando.travel/p/2a218124ab02bec8945ec7a53aa80580/adjuntos/236/imagenes/000/546/0000546021/1200x0/smart/una-las-7-maravillas-argentina-reside-cordoba-y-no-pasa-desapercibida-el-rio-mina-clavero-es-un-atractivo-turistico-ideal-el-verano.png"
+    },
+    {
+        "nombre": "Rio Negro",
+        "pais": "Argentina",
+        "imagen": "https://i0.wp.com/www.patagoniaandina.com/wp-content/uploads/2020/05/Bariloche-postada.jpg?resize=833%2C471&ssl=1&is-pending-load=1"
+    },
+    {
+        "nombre": "Mendoza",
+        "pais": "Argentina",
+        "imagen": "https://i0.wp.com/www.disfrutarosario.com/wp-content/uploads/2021/11/vinedos-y-bodegas-en-mendoza-a16.jpg?fit=750%2C559&ssl=1"
+    },
+    {
+        "nombre": "Bangkok",
+        "pais": "Thailand",
+        "imagen": "https://www.miviaje.info/wp-content/uploads/2016/12/templo-wat-arun-bangkok-turismo.jpg"
+    },
+    {
+        "nombre": "Petra",
+        "pais": "Jordan",
+        "imagen": "https://turismo.org/wp-content/uploads/2017/09/Ad-Deir-Petra.jpg"
+    },
+    {
+        "nombre": "Rome",
+        "pais": "Italy",
+        "imagen": "https://viajes.nationalgeographic.com.es/medio/2019/03/24/roma-tiber_4d916354_1280x720.jpg"
+    },
+    {
+        "nombre": "Dubai",
+        "pais": "United Arab Emirates",
+        "imagen": "https://turismo.org/wp-content/uploads/2016/09/Burj-Al-Ara.jpg"
+    },
+    {
+        "nombre": "London",
+        "pais": "United Kingdom",
+        "imagen": "https://res.cloudinary.com/worldpackers/image/upload/c_fill,f_auto,q_auto,w_1024/v1/guides/article_cover/a5pj5ftyivd8xevbub0b"
+    },
+    {
+        "nombre": "Paris",
+        "pais": "France",
+        "imagen": "https://www.viveparis.es/sites/default/files/imagenes/articulos/bateaux_mouches.jpg"
+    },
+    {
+        "nombre": "Yucatán",
+        "pais": "Mexico",
+        "imagen": "https://www.turismomexico.es/wp-content/uploads/2023/05/piramide-chichen-itza.jpg"
+    },
+    {
+        "nombre": "Havana",
+        "pais": "Cuba",
+        "imagen": "https://azertag.az/files/2022/1/16504640294588428748.jpg"
+    },
+    {
+        "nombre": "Berlin",
+        "pais": "Germany",
+        "imagen": "https://a.cdn-hotels.com/gdcs/production166/d279/c49112b0-58ef-11e8-a5ee-0242ac110030.jpg"
+    },
+    {
+        "nombre": "New York",
+        "pais": "United States",
+        "imagen": "https://elsumario.com/wp-content/uploads/2022/02/estudiar-ingles-en-new-york_opt.jpg"
+    },
+    {
+        "nombre": "Rio de Janeiro",
+        "pais": "Brazil",
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Cidade_Maravilhosa.jpg/1200px-Cidade_Maravilhosa.jpg"
+    }
+]
