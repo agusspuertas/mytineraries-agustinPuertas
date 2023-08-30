@@ -7,10 +7,10 @@ import axios from 'axios'
 function Cities() {
   const [cities, setCities] = useState()
 
-  useEffect(()=> {
+  useEffect(() => {
     axios.get('http://localhost:7000/api/cities?nombre=')
-  .then(response => setCities(response.data.cities))
-  .catch(err => console.log(err))
+      .then(response => setCities(response.data.cities))
+      .catch(err => console.log(err))
   }, []);
 
   const handleInputChange = async (city) => {
@@ -41,19 +41,17 @@ function Cities() {
         </div>
       </form>
 
-    <article className=' grid'> 
-      {
-        cities?.map(city => {
-          return (
-            <div key={city._id} className='m-4 mb-8 flex'>
-              <Card nombre={city.nombre} pais={city.pais} imagen={city.imagen} />
-            </div>
-          )
-        })
-      }
-    </article>
-
-
+      <article className=' grid grid-cols-1  md:grid-cols-2'> 
+        {
+          cities?.map(city => {
+            return (
+              <div key={city._id} className='m-4 mb-8'>
+                <Card nombre={city.nombre} pais={city.pais} imagen={city.imagen} />
+              </div>
+            )
+          })
+        }
+      </article>
     </section>
 
 
