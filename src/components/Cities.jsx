@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Card from './card'
 import axios from 'axios'
-
+import NotFound from './NotFound'
 
 
 function Cities() {
@@ -22,8 +22,6 @@ function Cities() {
     } catch (error) {
       console.log(error)
     }
-
-
   }
 
   return (
@@ -42,14 +40,15 @@ function Cities() {
       </form>
 
       <article className=' grid grid-cols-1  md:grid-cols-2'> 
-        {
+        { cities?.length > 0 ?
           cities?.map(city => {
             return (
               <div key={city._id} className='m-4 mb-8'>
-                <Card nombre={city.nombre} pais={city.pais} imagen={city.imagen} />
+                <Card id={city._id} nombre={city.nombre} pais={city.pais} imagen={city.imagen} />
               </div>
             )
           })
+          : <NotFound />
         }
       </article>
     </section>

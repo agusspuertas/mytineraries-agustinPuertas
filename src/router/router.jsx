@@ -4,6 +4,7 @@ import Citiespage from "../pages/Citiespage";
 import MainLayout from "../layouts/MainLayout";
 import Detailpage from "../pages/Detailpage";
 
+
 const router = createBrowserRouter([
     {
         path: '/',
@@ -19,9 +20,10 @@ const router = createBrowserRouter([
             },
 
             {
-                path: '/details',
+                path: '/cities/:id',
                 element: <Detailpage/>
-            }
+            },
+
         ]
     }
 ])
