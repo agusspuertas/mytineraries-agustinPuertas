@@ -54,21 +54,3 @@ export default Detail
 
 
 
-
-
-{/* <div className="max-w-sm bg-gray-200 rounded overflow-hidden shadow-lg">
-  <div className="px-6 py-4">
-    <div className="font-bold text-xl ">{city.nombre}</div>
-    <div className="font-bold text-xl ">{city.pais}</div>
-    <div className='mt-2'>
-      <img className=' w-80 h-auto md:h-[35vh] ' src={city.imagen} alt="Img" />
-    </div>
-  </div>
-  <article>
-    <p>{city.descripcion}</p>
-  </article>
-
-  <div className="px-6 pb-2">
-     <button  id='viewmore' className='bg-gray-300 rounded-md p-1'>View More</button> 
-  </div>
-</div> */}
