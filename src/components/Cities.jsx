@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
-import Card from './card'
+import Card from './Card.jsx'
 import axios from 'axios'
 import NotFound from './NotFound'
 

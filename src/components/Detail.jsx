@@ -20,7 +20,7 @@ function Detail() {
 
   return (
 
-    <main className='flex flex-col min-h-screen my-10'>
+    <main className='flex flex-col'>
 
     <section className=' mt-10 flex justify-center items-start mb-10 '>
 
@@ -38,12 +38,7 @@ function Detail() {
       </article>
     </section>
 
-    <section className='flex justify-center items-center '>
-      <div className='w-2/6 h-56 justify-center items-center mb-10 bg-gray-200 shadow-xl shadow-gray-600 rounded-2xl'>
-        
-      </div>
-
-    </section>
+    
 
     </main>
 
