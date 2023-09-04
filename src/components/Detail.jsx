@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
+import ItineraryCard from '../components/ItineraryCard'
 
 
 
@@ -9,14 +10,22 @@ function Detail() {
 
   const [city, setCity] = useState({})
   const { id } = useParams()
+  const [itineraries, setItineraries] = useState();
 
+    console.log(itineraries)
 
   useEffect(() => {
     axios.get(`http://localhost:7000/api/cities/${id}`)
       .then(response => setCity(response.data.city))
       .catch(err => console.log(err))
-  }, [id]);
 
+      axios.get(`http://localhost:7000/api/itineraries?cityId=${id}`)
+      .then(response => setItineraries(response.data.itineraries))
+      .catch(err => console.log(err))
+
+  }, []);
+
+  
 
   return (
 
@@ -38,7 +47,17 @@ function Detail() {
       </article>
     </section>
 
-    
+      <section>
+        {
+            itineraries?.length > 0 ?
+            itineraries?.map((itinerary) => {
+                return (
+                   <ItineraryCard nombre={itinerary.nombre}/>
+                )
+            })
+            : <h1 className='text-4xl text-[#F08CAE]'>No itineraries found</h1>
+    }
+      </section>
 
     </main>
 

@@ -6,7 +6,7 @@ function Detailpage() {
   return (
     <>
     <Detail/>
-    <ItineraryCard/>
+ 
     </>
   )
 }
