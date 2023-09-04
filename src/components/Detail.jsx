@@ -55,7 +55,7 @@ function Detail() {
                    <ItineraryCard nombre={itinerary.nombre} nombreUsuario={itinerary.nombreUsuario}  usuarioFoto={itinerary.usuarioFoto} duracion={itinerary.duracion} precio={itinerary.precio} likes={itinerary.likes} hashtags={itinerary.hashtags} comentarios={itinerary.comentarios} />
                 )
             })
-            : <h1 className='text-4xl text-[#F08CAE]'>No itineraries found</h1>
+            : <h1 className='text-4xl text-center'>No itineraries found</h1>
     }
       </section>
 

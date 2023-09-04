@@ -27,7 +27,6 @@ function ItineraryCard({nombre, nombreUsuario, usuarioFoto, duracion, precio, li
                   </div>
                     <div className='flex flex-col mt-2'>
                     <h1 className='text-xs font-semibold'>Activity duration {duracion}</h1>
-                    <h1 className='text-sm text-end font-light'>{hashtags}</h1>
                     </div>
                 </div>
             </div>
@@ -40,9 +39,12 @@ function ItineraryCard({nombre, nombreUsuario, usuarioFoto, duracion, precio, li
                         <h1 className='pt-3 text-xl font-bold'>{precio}</h1> 
                         <img className='w-14 h-15 ' src="https://cdn.icon-icons.com/icons2/651/PNG/512/Icon_Business_Set_00003_A_icon-icons.com_59841.png" alt="" />
               </div>
-              <div className='flex pt-4'>
+              <div className='flex flex-col pt-4'>
+                <div className='flex justify-end'>
                   <h1 className='text-lg font-light mr-4'>{likes} likes</h1>
-                  <h1 className='text-lg font-light'>{comentarios}</h1>
+                  <h1 className='text-lg font-light '>{comentarios}</h1>
+                </div>
+                    <h1 className='text-sm text-end font-light m'>{hashtags}</h1>
               </div>
             </div>
           </div>
