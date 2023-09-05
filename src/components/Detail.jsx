@@ -33,7 +33,7 @@ function Detail() {
 
   return (
 
-    <main className='flex flex-col'>
+    <main className='flex flex-col min-h-screen '>
 
       <section className=' mt-10 flex justify-center items-start mb-10 '>
 
