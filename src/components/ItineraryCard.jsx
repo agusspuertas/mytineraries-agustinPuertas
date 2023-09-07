@@ -2,10 +2,9 @@ import React from 'react'
 import { useState } from 'react';
 
 
+
 function ItineraryCard({nombre, nombreUsuario, usuarioFoto, duracion, precio, likes, hashtags, comentarios  }) {
-
   const [viewMore, setViewMore] = useState(false);
-
   const handleShowViewMore = () => {
       setViewMore(!viewMore);
   }

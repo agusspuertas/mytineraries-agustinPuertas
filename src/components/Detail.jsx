@@ -1,34 +1,29 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import axios from 'axios'
 import ItineraryCard from '../components/ItineraryCard'
+import { useSelector, useDispatch } from 'react-redux'
+import { getCity } from '../store/actions/cityActions'
+import { getItineraries } from '../store/actions/itineraryActions'
 
 
 
 function Detail() {
-
-  const [city, setCity] = useState({})
+  const dispatch = useDispatch()
+  const city = useSelector ((store)=>store.cityReducer.city)
+  const itineraries=useSelector((store)=>store.itineraryReducer.itineraries)
   const { id } = useParams()
-  const [itineraries, setItineraries] = useState();
 
-  console.log(itineraries)
-
-  useEffect(() => {
-
-    axios.get(`http://localhost:7000/api/cities/${id}`)
-      .then(response => setCity(response.data.city))
-      .catch(err => console.log(err))
-
-    axios.get(`http://localhost:7000/api/itineraries/city/${id}`)
-      .then(response => {
-        console.log(response)
-        setItineraries(response.data)})
-      .catch(err => console.log(err))
-
-
-  }, []);
-
+    useEffect(()=> {
+      dispatch(getCity({
+        id
+      }))
+      
+      dispatch(getItineraries(id))
+      }, [])
+      
+      // console.log(itineraries)
+      console.log(id)
 
 
   return (
@@ -56,7 +51,7 @@ function Detail() {
           itineraries?.length > 0 ?
             itineraries?.map((itinerary) => {
               return (
-                <ItineraryCard nombre={itinerary.nombre} nombreUsuario={itinerary.nombreUsuario} usuarioFoto={itinerary.usuarioFoto} duracion={itinerary.duracion} precio={itinerary.precio} likes={itinerary.likes} hashtags={itinerary.hashtags} comentarios={itinerary.comentarios} />
+                <ItineraryCard nombre={itinerary.nombre} nombreUsuario={itinerary.nombreUsuario} usuarioFoto={itinerary.usuarioFoto} duracion={itinerary.duracion} precio={itinerary.precio} likes={itinerary.likes} hashtags={itinerary.hashtags} comentarios={itinerary.comentarios}/>
               )
             })
             : <h1 className='text-4xl font-bold text-center'>No itineraries found for this city</h1>

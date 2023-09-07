@@ -1,7 +1,11 @@
 import React from 'react'
 import { Link as LinkRouter } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
+import { getCities } from '../store/actions/cityActions'
+import { useEffect } from 'react'
 
 function Card({nombre, pais, imagen, id}) {
+
   return (
     <div className="max-w-sm bg-gray-200 rounded overflow-hidden shadow-xl shadow-gray-400">
   <div className=''>

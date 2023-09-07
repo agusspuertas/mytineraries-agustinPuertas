@@ -1,35 +1,25 @@
 import React, { useEffect, useState, useRef } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { getCities, searchCity} from '../store/actions/cityActions'
 import Card from './Card.jsx'
-import axios from 'axios'
 import NotFound from './NotFound'
 
 
 function Cities() {
-  const [cities, setCities] = useState()
+  const cities= useSelector((store)=>store.cityReducer.cities)
+  const dispatch = useDispatch()
   const inputSearch = useRef()
 
+  console.log(cities)
 
   useEffect(() => {
-    axios.get('http://localhost:7000/api/cities?nombre=')
-      .then(response => setCities(response.data.cities))
-      .catch(err => console.log(err))
+    dispatch(getCities())
   }, []);
 
   const handleSearch = async () => {
-
-    const name = inputSearch.current.value
-
-    try {
-      const response = await axios.get(`http://localhost:7000/api/cities?nombre=${name}`)
-      setCities(response.data.cities)
-
-    } catch (error) {
-      if(error.response.data.status === 404){
-        setCities([])
-      }else {
-        console.log(error)
-      }
-    }
+    dispatch(searchCity({
+     nombre: inputSearch.current.value
+    }))
   }
 
   return (
@@ -53,7 +43,7 @@ function Cities() {
           cities?.map(city => {
             return (
               <div key={city._id} className='m-4 mb-8'>
-                <Card id={city._id}  nombre={city.nombre} pais={city.pais} imagen={city.imagen} />
+                <Card   id={city._id}  nombre={city.nombre} pais={city.pais} imagen={city.imagen} />
               </div>
             )
           })
