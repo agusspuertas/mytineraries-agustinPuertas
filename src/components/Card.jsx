@@ -7,7 +7,7 @@ import { useEffect } from 'react'
 function Card({nombre, pais, imagen, id}) {
 
   return (
-    <div className="max-w-sm bg-gray-200 rounded overflow-hidden shadow-xl shadow-gray-400">
+    <div className="max-w-sm bg-[#A82424] rounded overflow-hidden ">
   <div className=''>
     <div className='grid grid-cols-3 my-2'>
        <div className='flex col-span-2'>
@@ -16,7 +16,7 @@ function Card({nombre, pais, imagen, id}) {
        </div>
       
   <div className='justify-self-end mr-4'>
-   <LinkRouter to={`/cities/${id}`} ><button className='bg-gray-300 rounded-md p-1'>Details</button> </LinkRouter>
+   <LinkRouter to={`/cities/${id}`} ><button className='bg-[#F0E1D1] font-semibold text-[#2C3A33] rounded-md p-1 hover:bg-[#EBD7C1]'>Details</button> </LinkRouter>
   </div>
     </div>
     <div>

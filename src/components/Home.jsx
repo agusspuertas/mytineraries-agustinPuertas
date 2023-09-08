@@ -12,7 +12,7 @@ function Home() {
                     <div className='flex flex-col'>
                         <h1 className='text-gray-400 text-xl font-bold text-center'>MyTineraries</h1>
                         <p className='text-center text-xs md:text-sm font-bold p-1'>Find your perfect trip, designed by insiders who know and love their cities.</p>
-                        <button class="self-center text-xs bg-slate-300 hover:bg-stone-200 border border-slate-400 text-black font-bold w-16 p-1 rounded-full">
+                        <button className="self-center text-xs bg-slate-300 hover:bg-stone-200 border border-slate-400 text-black font-bold w-16 p-1 rounded-full">
                            <LinkRouter to={'/cities'} >Let's Go!</LinkRouter>
                         </button>
                     </div>

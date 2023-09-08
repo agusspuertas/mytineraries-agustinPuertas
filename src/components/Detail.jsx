@@ -21,16 +21,12 @@ function Detail() {
       
       dispatch(getItineraries(id))
       }, [])
-      
-      // console.log(itineraries)
-      console.log(id)
-
 
   return (
 
     <main className='flex flex-col min-h-screen '>
 
-      <section className=' mt-10 flex justify-center items-start mb-10 '>
+      <section className=' pt-10 flex justify-center  items-start pb-10 mb-10 '>
 
         <article className='flex shadow-xl shadow-gray-600 rounded-r-2xl rounded-l-lg'>
           <img src={city.imagen} alt="img" className='h-[60vh] w-[40vw] object-cover rounded-l-lg' />
@@ -51,7 +47,7 @@ function Detail() {
           itineraries?.length > 0 ?
             itineraries?.map((itinerary) => {
               return (
-                <ItineraryCard nombre={itinerary.nombre} nombreUsuario={itinerary.nombreUsuario} usuarioFoto={itinerary.usuarioFoto} duracion={itinerary.duracion} precio={itinerary.precio} likes={itinerary.likes} hashtags={itinerary.hashtags} comentarios={itinerary.comentarios}/>
+                <ItineraryCard key={itinerary._id} nombre={itinerary.nombre} nombreUsuario={itinerary.nombreUsuario} usuarioFoto={itinerary.usuarioFoto} duracion={itinerary.duracion} precio={itinerary.precio} likes={itinerary.likes} hashtags={itinerary.hashtags} comentarios={itinerary.comentarios}/>
               )
             })
             : <h1 className='text-4xl font-bold text-center'>No itineraries found for this city</h1>

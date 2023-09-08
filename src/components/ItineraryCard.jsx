@@ -36,7 +36,7 @@ function ItineraryCard({nombre, nombreUsuario, usuarioFoto, duracion, precio, li
             <div className='flex justify-between px-2'>
               <div className='flex '>
               {[...Array(precio)].map((_, index) => (
-<img className='w-12 h-12 ' src="https://cdn.icon-icons.com/icons2/651/PNG/512/Icon_Business_Set_00003_A_icon-icons.com_59841.png" alt="" />
+<img key={index} className='w-12 h-12 ' src="https://cdn.icon-icons.com/icons2/651/PNG/512/Icon_Business_Set_00003_A_icon-icons.com_59841.png" alt="" />
                         ))}
                        
               </div>
