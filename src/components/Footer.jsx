@@ -6,15 +6,15 @@ function Footer() {
 
       <section className='justify-start'>
       <div className='menu block'>
-        <LinkRouter className='m-3 btn-ghost rounded-lg p-1 hover:bg-[#A82424] text-white' to={'/'} >Home</LinkRouter>
-        <LinkRouter className='m-3 btn-ghost rounded-lg p-1 hover:bg-[#A82424] text-white' to={'/cities'} >Cities</LinkRouter>
+        <LinkRouter className='m-3 btn-ghost rounded-lg p-1 hover:bg-[#2659A6] text-white' to={'/'} >Home</LinkRouter>
+        <LinkRouter className='m-3 btn-ghost rounded-lg p-1 hover:bg-[#2659A6] text-white' to={'/cities'} >Cities</LinkRouter>
       </div>
       </section>
 
 
       {/* Social_Icons */}
       <section className='justify-center flex mr-2'>
-      <div className='flex justify-around content-center w-32 bg-[#A82424] rounded-lg hover:bg-[#D8B097]'>
+      <div className='flex justify-around content-center w-32 bg-[#2659A6] rounded-lg hover:bg-gray-200'>
         {/* Facebook */}
         <a href="#">
           <svg
@@ -70,7 +70,7 @@ function Footer() {
 
     <section className='flex justify-end'>
       <div className='titulo mr-5 hidden md:block '>
-      <LinkRouter to={'/'}> <p className="font-amatica font-bold btn btn-ghost normal-case text-5xl  text-[#F0E1D1] hover:text-[#A82424]">MyTineraries</p> </LinkRouter>
+      <LinkRouter to={'/'}> <p className="font-amatica font-bold btn btn-ghost normal-case text-5xl  text-[#F0E1D1] hover:text-[#2659A6]">MyTineraries</p> </LinkRouter>
       </div>
     </section>
 

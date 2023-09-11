@@ -10,8 +10,8 @@ function Header() {
     {/* Menu */}
       <div className='menu hidden md:block'>
         <ul className='flex'>
-        <LinkRouter className='m-3 text-lg hover:bg-[#A82424] rounded-lg p-1 text-[#FAF5F0]' to={'/'}><li>Home</li></LinkRouter>
-        <LinkRouter className='m-3 text-lg hover:bg-[#A82424] rounded-lg p-1 text-[#FAF5F0]' to={'/cities'} ><li>Cities</li></LinkRouter>
+        <LinkRouter className='m-3 text-lg hover:bg-[#2659A6] rounded-lg p-1 text-[#FAF5F0]' to={'/'}><li>Home</li></LinkRouter>
+        <LinkRouter className='m-3 text-lg hover:bg-[#2659A6] rounded-lg p-1 text-[#FAF5F0]' to={'/cities'} ><li>Cities</li></LinkRouter>
         </ul>
       </div>
 
@@ -33,14 +33,14 @@ function Header() {
     {/* Titulo */}
       <div className='col-span-2 justify-center'>
       <LinkRouter to={'/'}>
-        <p className="font-amatica text-center font-bold btn btn-ghost normal-case text-5xl hover:bg-[#A82424] text-[#FAF5F0]">MyTineraries</p>
+        <p className="font-amatica text-center font-bold text-5xl hover:text-[#2659A6] text-[#FAF5F0]">MyTineraries</p>
       </LinkRouter>
       </div>
 
 
       {/* Login Logo */}
       <div className='overflow-hidden justify-end'>
-        <div className='avatar w-8 sm:w-10 mx-2 btn-ghost rounded-lg p-1 hover:bg-[#A82424]'>
+        <div className='avatar w-8 sm:w-10 mx-2 btn-ghost rounded-lg p-1 hover:bg-[#2659A6]'>
           <img src="/Header_Img/UserLogo.png" alt="user logo" />
         </div>
       </div>
