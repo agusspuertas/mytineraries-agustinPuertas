@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { getCities, searchCity} from '../store/actions/cityActions'
+import { getCities, searchCity } from '../store/actions/cityActions'
 import Card from './Card.jsx'
 import NotFound from './NotFound'
 
 
 function Cities() {
-  const cities= useSelector((store)=>store.cityReducer.cities)
+  const cities = useSelector((store) => store.cityReducer.cities)
   const dispatch = useDispatch()
   const inputSearch = useRef()
 
@@ -16,8 +16,14 @@ function Cities() {
 
   const handleSearch = async () => {
     dispatch(searchCity({
-     nombre: inputSearch.current.value
+      nombre: inputSearch.current.value
     }))
+  }
+
+  const handleResetCities = () => {
+    if (inputSearch.current.value === "") {
+      dispatch(getCities());
+    }
   }
 
   return (
@@ -31,17 +37,27 @@ function Cities() {
               <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
             </svg>
           </div>
-          <input ref={inputSearch} type="search" id="default-search" className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Cities..." required />
+          <input
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                handleSearch();
+              }
+            }}
+            onChange={handleResetCities}
+            ref={inputSearch}
+            type="search" id="default-search" className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Cities..." required
+          />
+
           <button onClick={handleSearch} type="submit" className="text-black font-bold absolute right-2.5 bottom-2.5 bg-[#2659A6]  hover:text-white  focus:ring-4 focus:outline-none rounded-lg text-sm px-4 py-2">Search</button>
         </div>
       </div>
 
-      <article className='grid grid-cols-1 md:grid-cols-2'> 
-        { cities?.length > 0 ?
+      <article className='grid grid-cols-1 md:grid-cols-2'>
+        {cities?.length > 0 ?
           cities?.map(city => {
             return (
               <div key={city._id} className='m-4 mb-8'>
-                <Card  id={city._id}  nombre={city.nombre} pais={city.pais} imagen={city.imagen} />
+                <Card id={city._id} nombre={city.nombre} pais={city.pais} imagen={city.imagen} />
               </div>
             )
           })

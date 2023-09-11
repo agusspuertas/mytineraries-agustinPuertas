@@ -14,7 +14,7 @@ function Footer() {
 
       {/* Social_Icons */}
       <section className='justify-center flex mr-2'>
-      <div className='flex justify-around content-center w-32 bg-[#2659A6] rounded-lg hover:bg-gray-200'>
+      <div className='flex justify-around content-center w-32 bg-[#477ED7] rounded-lg hover:bg-gray-200'>
         {/* Facebook */}
         <a href="#">
           <svg
