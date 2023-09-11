@@ -3,7 +3,7 @@ import Carousel from './Carrusel'
 import { Link as LinkRouter } from 'react-router-dom'
 function Home() {
     return (
-        <main className='min-h-screen bg-stone-200 flex'>
+        <main className='min-h-screen bg-[#383D42] flex'>
             <div className='grid grid-cols-1 md:grid-cols-2 w-full m-4 md:m-0 justify-around items-center'>
 
 

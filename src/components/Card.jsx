@@ -1,14 +1,11 @@
 import React from 'react'
 import { Link as LinkRouter } from 'react-router-dom'
-import { useSelector, useDispatch } from 'react-redux'
-import { getCities } from '../store/actions/cityActions'
-import { useEffect } from 'react'
 
 function Card({nombre, pais, imagen, id}) {
 
   return (
-    <div className="max-w-sm bg-[#A82424] rounded overflow-hidden ">
-  <div className=''>
+    <div className="max-w-md bg-[#A82424] rounded overflow-hidden ">
+  <div>
     <div className='grid grid-cols-3 my-2'>
        <div className='flex col-span-2'>
     <div className="font-bold text-xl mx-2">{nombre}</div>
@@ -20,7 +17,7 @@ function Card({nombre, pais, imagen, id}) {
   </div>
     </div>
     <div>
-        <img className=' w-full h-auto md:h-[36vh] ' src={imagen} alt="Img" />
+        <img className=' w-full h-auto md:h-[36vh] object-cover' src={imagen} alt="Img" />
        
     </div>
   </div>

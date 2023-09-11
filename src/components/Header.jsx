@@ -32,7 +32,9 @@ function Header() {
 
     {/* Titulo */}
       <div className='col-span-2 justify-center'>
-        <span className="font-amatica text-center font-bold btn btn-ghost normal-case text-5xl hover:bg-[#A82424] text-[#FAF5F0]">MyTineraries</span>
+      <LinkRouter to={'/'}>
+        <p className="font-amatica text-center font-bold btn btn-ghost normal-case text-5xl hover:bg-[#A82424] text-[#FAF5F0]">MyTineraries</p>
+      </LinkRouter>
       </div>
 
 

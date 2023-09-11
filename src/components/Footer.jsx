@@ -2,16 +2,19 @@ import React from 'react'
 import { Link as LinkRouter } from 'react-router-dom'
 function Footer() {
   return (
-    <footer className='bg-gray-300 h-16 flex justify-between items-center '>
-      <div className='menu block '>
-        <LinkRouter className='m-3 btn-ghost rounded-lg p-1' to={'/'} >Home</LinkRouter>
-        <LinkRouter className='m-3 btn-ghost rounded-lg p-1' to={'/cities'} >Cities</LinkRouter>
+    <footer className='bg-[#262A2B] h-16 grid grid-cols-2  items-center md:grid-cols-3'>
+
+      <section className='justify-start'>
+      <div className='menu block'>
+        <LinkRouter className='m-3 btn-ghost rounded-lg p-1 hover:bg-[#A82424] text-white' to={'/'} >Home</LinkRouter>
+        <LinkRouter className='m-3 btn-ghost rounded-lg p-1 hover:bg-[#A82424] text-white' to={'/cities'} >Cities</LinkRouter>
       </div>
+      </section>
 
 
       {/* Social_Icons */}
-      <div className='flex justify-center'>
-
+      <section className='justify-center flex mr-2'>
+      <div className='flex justify-around content-center w-32 bg-[#A82424] rounded-lg hover:bg-[#D8B097]'>
         {/* Facebook */}
         <a href="#">
           <svg
@@ -63,10 +66,13 @@ function Footer() {
         </a>
 
       </div>
+      </section>
 
-      <div className='titulo mr-5 hidden md:block'>
-        <a className="font-amatica font-bold btn btn-ghost normal-case text-5xl">MyTineraries</a>
+    <section className='flex justify-end'>
+      <div className='titulo mr-5 hidden md:block '>
+      <LinkRouter to={'/'}> <p className="font-amatica font-bold btn btn-ghost normal-case text-5xl  text-[#F0E1D1] hover:text-[#A82424]">MyTineraries</p> </LinkRouter>
       </div>
+    </section>
 
     </footer>
   )

@@ -11,14 +11,14 @@ function ItineraryCard({nombre, nombreUsuario, usuarioFoto, duracion, precio, li
 
   return (
     <section className='flex justify-center items-center '>
-    <div className='w-2/6 h-56 flex flex-col justify-center items-center mb-10 bg-gray-200 shadow-xl shadow-gray-600 rounded-2xl'>
+    <div className='w-2/6 h-56 flex flex-col justify-center items-center bg-gray-200  rounded-2xl'>
         <article className='w-full h-full'>
             <div className='flex justify-center px-1 pt-1' >
                 <div className=' w-full h-12'>
                   <div className='flex justify-between'>
                     <div>
-                    <h1 className='text-xl font-bold'>{nombre}</h1>
-                    <h1 className=' font-light'>By {nombreUsuario}</h1>
+                    <p className='text-xl font-bold'>{nombre}</p>
+                    <p className=' font-light'>By {nombreUsuario}</p>
                     </div>
                 <div className=' className="w-11 h-11 ml-1 rounded-full overflow-hidden'>
                     <img className='className="w-full h-full object-cover' src={usuarioFoto} alt="" />
@@ -54,7 +54,7 @@ function ItineraryCard({nombre, nombreUsuario, usuarioFoto, duracion, precio, li
     </div>
 
     {viewMore && (
-        <div className='ml-5 w-2/5 h-56 bg-gray-200  shadow-xl shadow-gray-600 rounded-2xl'>
+        <div className='ml-5 w-2/5 h-56 bg-gray-200  rounded-2xl'>
             <h1 className='text-center font-bold text-2xl'> Under Contruction</h1>
         </div>
       )}

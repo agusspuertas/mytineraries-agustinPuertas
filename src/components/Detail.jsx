@@ -24,7 +24,7 @@ function Detail() {
 
   return (
 
-    <main className='flex flex-col min-h-screen '>
+    <main className='flex flex-col min-h-screen bg-[#DFE2DF]'>
 
       <section className=' pt-10 flex justify-center  items-start pb-10 mb-10 '>
 
@@ -42,7 +42,7 @@ function Detail() {
         </article>
       </section>
 
-      <section>
+      <section className='bg-[#383D42] py-10'>
         {
           itineraries?.length > 0 ?
             itineraries?.map((itinerary) => {
