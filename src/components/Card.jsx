@@ -4,7 +4,7 @@ import { Link as LinkRouter } from 'react-router-dom'
 function Card({nombre, pais, imagen, id}) {
 
   return (
-    <div className="max-w-md bg-[#1A3D74] rounded overflow-hidden ">
+    <div className="max-w-md bg-[#1A3D74] mx-10 rounded overflow-hidden shadow-md shadow-gray-900">
   <div>
     <div className='grid grid-cols-3 my-2'>
        <div className='flex col-span-2'>

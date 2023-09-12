@@ -24,11 +24,11 @@ function Detail() {
 
   return (
 
-    <main className='flex flex-col  bg-[#DFE2DF]'>
+    <main className='flex flex-col bg-[#383D42] '>
 
-      <section className=' pt-10 flex justify-center min-h-screen items-center pb-10 mb-10 '>
+      <section className='flex justify-center min-h-screen items-center '>
 
-        <article className='flex shadow-xl shadow-gray-600 rounded-r-2xl rounded-l-lg'>
+        <article className='flex shadow-xl shadow-gray-900 rounded-r-2xl rounded-l-lg'>
           <img src={city.imagen} alt="img" className='h-[60vh] w-[40vw] object-cover rounded-l-lg' />
           <div className='w-80 flex flex-col rounded-r-2xl bg-gray-300 justify-center items-center '>
             <div className='shadow-md rounded-xl mx-5 py-2  shadow-neutral-400'>
@@ -42,7 +42,7 @@ function Detail() {
         </article>
       </section>
 
-      <section className='bg-[#383D42] content-end py-10'>
+      <section className='bg-[#383D42] content-end pb-20'>
         {
           itineraries?.length > 0 ?
             itineraries?.map((itinerary) => {

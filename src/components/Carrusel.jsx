@@ -56,7 +56,7 @@ function PopularMyTineraries() {
 
                 <div className='w-full card bg-gray-300 shadow-lg'>
 
-                        <h2 className='mx-3 font-bold font-amatica md:text-4xl'>Popular MyTineraries</h2>
+                        <h2 className='mx-3 text-center font-bold font-amatica md:text-5xl'>Popular MyTineraries</h2>
                     <div>
                         <div className=' flex justify-end items-center  m-2'>
                             <button className="btn btn-sm  btn-circle" onClick={prevSlide}>

@@ -28,8 +28,8 @@ function Cities() {
 
   return (
 
-    <section className='flex flex-col justify-center bg-[#383D42]  items-center min-h-screen'>
-      <div className='w-72 m-4 sm:w-80'>
+    <section className='flex flex-col justify-center pt-24 bg-[#383D42]  items-center min-h-screen'>
+      <article className='w-72 m-4 sm:w-96 '>
         <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
         <div className="relative">
           <div className="absolute inset-y-0  left-0 flex items-center pl-3 pointer-events-none">
@@ -45,12 +45,12 @@ function Cities() {
             }}
             onChange={handleResetCities}
             ref={inputSearch}
-            type="search" id="default-search" className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Cities..." required
+            type="search" id="default-search" className="block w-full p-4 pl-10 text-md text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Cities..." required
           />
 
-          <button onClick={handleSearch} type="submit" className="text-black font-bold absolute right-2.5 bottom-2.5 bg-[#2659A6]  hover:text-white  focus:ring-4 focus:outline-none rounded-lg text-sm px-4 py-2">Search</button>
+          <button onClick={handleSearch} type="submit" className="text-black font-semibold absolute right-2.5 bottom-2.5 bg-[#2659A6]  hover:text-white  focus:ring-4 focus:outline-none rounded-lg text-md px-4 py-2">Search</button>
         </div>
-      </div>
+      </article>
 
       <article className='grid grid-cols-1 md:grid-cols-2'>
         {cities?.length > 0 ?
@@ -65,7 +65,6 @@ function Cities() {
         }
       </article>
     </section>
-
 
   )
 }

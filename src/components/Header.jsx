@@ -4,14 +4,14 @@ import { Link as LinkRouter } from "react-router-dom"
 function Header() {
   return (
 
-    <section className="navbar h-20 bg-[#383D42]  grid grid-cols-4">
+    <section className="navbar h-20 bg-[#383D42] grid grid-cols-4 fixed top-0 z-10 ">
 
 
     {/* Menu */}
       <div className='menu hidden md:block'>
         <ul className='flex'>
-        <LinkRouter className='m-3 text-lg hover:bg-[#2659A6] rounded-lg p-1 text-[#FAF5F0]' to={'/'}><li>Home</li></LinkRouter>
-        <LinkRouter className='m-3 text-lg hover:bg-[#2659A6] rounded-lg p-1 text-[#FAF5F0]' to={'/cities'} ><li>Cities</li></LinkRouter>
+        <LinkRouter className='m-3 text-xl hover:bg-[#2659A6] rounded-lg p-1 text-[#FAF5F0]' to={'/'}><li>Home</li></LinkRouter>
+        <LinkRouter className='m-3 text-xl hover:bg-[#2659A6] rounded-lg p-1 text-[#FAF5F0]' to={'/cities'} ><li>Cities</li></LinkRouter>
         </ul>
       </div>
 
@@ -33,7 +33,7 @@ function Header() {
     {/* Titulo */}
       <div className='col-span-2 justify-center'>
       <LinkRouter to={'/'}>
-        <p className="font-amatica text-center font-bold text-5xl hover:text-[#2659A6] text-[#FAF5F0]">MyTineraries</p>
+        <p className="font-amatica text-center font-bold text-6xl hover:text-[#2659A6] text-[#FAF5F0]">MyTineraries</p>
       </LinkRouter>
       </div>
 

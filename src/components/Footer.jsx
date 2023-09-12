@@ -2,12 +2,15 @@ import React from 'react'
 import { Link as LinkRouter } from 'react-router-dom'
 function Footer() {
   return (
-    <footer className='bg-[#262A2B] h-16 grid grid-cols-2  items-center md:grid-cols-3'>
+    <footer className='bg-[#262A2B] h-auto grid grid-cols-2 py-4 items-center md:grid-cols-3'>
 
       <section className='justify-start'>
-      <div className='menu block'>
-        <LinkRouter className='m-3 btn-ghost rounded-lg p-1 hover:bg-[#2659A6] text-white' to={'/'} >Home</LinkRouter>
-        <LinkRouter className='m-3 btn-ghost rounded-lg p-1 hover:bg-[#2659A6] text-white' to={'/cities'} >Cities</LinkRouter>
+      <div className='flex flex-col'>
+        <p className='mx-4 text-lg  text-gray-500'>Navegation</p>
+        <div>
+        <LinkRouter className='m-3 text-lg btn-ghost rounded-lg p-1 hover:bg-[#2659A6] text-white' to={'/'} >Home</LinkRouter>
+        <LinkRouter className='m-3 text-lg btn-ghost rounded-lg p-1 hover:bg-[#2659A6] text-white' to={'/cities'} >Cities</LinkRouter>
+        </div>
       </div>
       </section>
 

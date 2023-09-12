@@ -10,7 +10,7 @@ function ItineraryCard({nombre, nombreUsuario, usuarioFoto, duracion, precio, li
   }
 
   return (
-    <section className='flex justify-center items-center '>
+    <section className='flex justify-center  items-center '>
     <div className='w-2/6 h-56 flex flex-col justify-center items-center bg-gray-200  rounded-2xl'>
         <article className='w-full h-full'>
             <div className='flex justify-center px-1 pt-1' >
