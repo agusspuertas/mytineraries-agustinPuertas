@@ -39,10 +39,14 @@ function Header() {
 
 
       {/* Login Logo */}
-      <div className='overflow-hidden justify-end'>
-        <div className='avatar w-8 sm:w-10 mx-2 btn-ghost rounded-lg p-1 hover:bg-[#2659A6]'>
-          <img src="/Header_Img/UserLogo.png" alt="user logo" />
+      <div className='justify-end mr-4 flex'>
+
+      <LinkRouter to={'/signin'}>
+        <div className=' mx-2 btn-ghost rounded-lg p-1 hover:bg-[#2659A6] flex'>
+          <p className='font-bold mt-1'>LOGIN</p>
+          <img className='w-8 sm:w-9' src="/Header_Img/UserLogo.png" alt="user logo" />
         </div>
+      </LinkRouter>
       </div>
       
     </section>
