@@ -4,7 +4,6 @@ import { Link as LinkRouter } from "react-router-dom"
 
 function Header() {
 
-  let [show, setShow] = useState(false);
   const user = useSelector(store => store.userReducer.user)
   console.log(user)
  const defaultPhoto= '/Header_Img/UserLogo.png'
@@ -51,7 +50,7 @@ function Header() {
 
       <LinkRouter to={'/signin'}>
         <div className=' mx-2 btn-ghost rounded-lg p-1 hover:bg-[#2659A6] flex'>
-          <p className='font-bold mt-1'>{user ? 'Logout' : 'Login'}</p>
+          <p className='font-bold mt-1 mr-2'>{user ? 'Logout' : 'Login'}</p>
           <img className='w-9 h-auto sm:w-9 ' src={user ? user.foto: defaultPhoto} alt="user logo" />
         </div>
       </LinkRouter>
