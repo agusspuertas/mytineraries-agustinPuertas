@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useSelector } from 'react-redux';
 import { Link as LinkRouter } from "react-router-dom"
 
 function Header() {
+
+  let [show, setShow] = useState(false);
+  const user = useSelector(store => store.userReducer.user)
+  console.log(user)
+ const defaultPhoto= '/Header_Img/UserLogo.png'
+
+
   return (
 
     <section className="navbar h-20 bg-[#383D42] grid grid-cols-4 fixed top-0 z-10 ">
@@ -43,8 +51,8 @@ function Header() {
 
       <LinkRouter to={'/signin'}>
         <div className=' mx-2 btn-ghost rounded-lg p-1 hover:bg-[#2659A6] flex'>
-          <p className='font-bold mt-1'>LOGIN</p>
-          <img className='w-8 sm:w-9' src="/Header_Img/UserLogo.png" alt="user logo" />
+          <p className='font-bold mt-1'>{user ? 'Logout' : 'Login'}</p>
+          <img className='w-9 h-auto sm:w-9 ' src={user ? user.foto: defaultPhoto} alt="user logo" />
         </div>
       </LinkRouter>
       </div>

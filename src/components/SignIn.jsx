@@ -20,7 +20,7 @@ function SignIn() {
       [event.target.name]: event.target.value
     })
   }
-  console.log(formData)
+  // console.log(formData)
 
   const handleSignIn = async (event) => {
     event.preventDefault();
