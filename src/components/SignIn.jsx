@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { user_login } from '../store/actions/userAction'
 import { Link as LinkRouter } from "react-router-dom"
+import {GoogleSignIn} from '../components/GoogleSignIn'
 
 
 function SignIn() {
@@ -78,6 +79,8 @@ function SignIn() {
                   />
                 </div>
               </div>
+
+              <GoogleSignIn/>
 
               <div>
                 <button
