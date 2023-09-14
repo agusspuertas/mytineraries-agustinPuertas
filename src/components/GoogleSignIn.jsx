@@ -32,7 +32,7 @@ export const GoogleSignIn = () => {
     }
 
     useEffect(() => {
-        window.onload = function () {
+        if(window.google) {
             window.google.accounts.id.initialize({
                 client_id: "244105246850-gfh4tp8p6qpstb6kd3bcr3vvq9ds27ii.apps.googleusercontent.com",
                 callback: handleCredentialResponse
