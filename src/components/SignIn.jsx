@@ -5,6 +5,8 @@ import { Link as LinkRouter } from "react-router-dom"
 import {GoogleSignIn} from '../components/GoogleSignIn'
 
 
+
+
 function SignIn() {
  const store = useSelector(store => store.userReducer)
 //  console.log('Viene del store',store)

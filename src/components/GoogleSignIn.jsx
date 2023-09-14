@@ -1,22 +1,34 @@
 import axios from "axios";
 import { useRef } from "react";
-import { useEffect } from "react"
-
+import { useEffect, useState } from "react"
+import { user_login_google } from "../store/actions/userAction";
+import { useDispatch, useSelector } from "react-redux";
 
 
 export const GoogleSignIn = () => {
 
+    // const store=useSelector(store=>store.userReducer)
+
+    const dispatch = useDispatch();
+
     const googleButton = useRef();
 
     const handleCredentialResponse = async (response) => {
-        // console.info('JWT GOOGLE: ', response.credential);
+ 
+
         const data = {
             token_id: response.credential
         }
+        try {
+            dispatch(user_login_google(
+                data
+            ))
 
-        const userResponse = await axios.post('http://localhost:7000/api/auth/google', data);
+        } catch (error) {
+            console.log(error);
+        }
 
-        console.log(userResponse)
+
     }
 
     useEffect(() => {
