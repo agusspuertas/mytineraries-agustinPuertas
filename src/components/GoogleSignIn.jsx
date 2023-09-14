@@ -14,7 +14,6 @@ export const GoogleSignIn = () => {
     const googleButton = useRef();
 
     const handleCredentialResponse = async (response) => {
- 
 
         const data = {
             token_id: response.credential
@@ -27,7 +26,6 @@ export const GoogleSignIn = () => {
         } catch (error) {
             console.log(error);
         }
-
 
     }
 

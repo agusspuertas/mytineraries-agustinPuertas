@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Link as LinkRouter } from "react-router-dom"
 import { user_register } from '../store/actions/userAction';
 import { useNavigate } from 'react-router-dom';
+import {GoogleSignIn} from '../components/GoogleSignIn'
 
 function SignUp() {
 
@@ -175,7 +176,7 @@ const handleSignUp = async (event) => {
                 </div>
               </div>
               
-
+              <GoogleSignIn/>
 
               <div>
                 <button
