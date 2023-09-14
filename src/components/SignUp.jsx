@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link as LinkRouter } from "react-router-dom"
 import { user_register } from '../store/actions/userAction';
-
+import { useNavigate } from 'react-router-dom';
 
 function SignUp() {
 
@@ -38,6 +38,8 @@ function SignUp() {
     pais: ''
 })
 
+const navigate = useNavigate();
+
 const handleInput = (event) => {
   setFormData({
     ...formData,
@@ -53,6 +55,7 @@ const handleSignUp = async (event) => {
     dispatch(user_register({
       data:formData
     }))
+    navigate('/signin')
   } catch (error) {
       console.log(error)
   }
