@@ -31,8 +31,17 @@ export const user_login = createAsyncThunk('user_login', async (obj) => {
       }
     }
 
- 
 } )
+
+
+export const user_register = createAsyncThunk('user_register',async(obj)=>{
+  try {
+      const { data } = await axios.post('http://localhost:7000/api/auth/signup', obj.data)
+      console.log("Successful registration");
+  } catch (error) {
+      console.log(error);
+  }
+})
 
 
 export const user_logout = createAsyncThunk(

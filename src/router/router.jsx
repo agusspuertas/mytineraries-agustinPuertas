@@ -4,7 +4,9 @@ import Citiespage from "../pages/Citiespage";
 import MainLayout from "../layouts/MainLayout";
 import Detailpage from "../pages/Detailpage";
 import Signinpage from "../pages/SingInpage";
+import Signuppage from "../pages/Signuppage";
 import ProtectedRoute from "./ProtectedRoute";
+
 
 const router = createBrowserRouter([
     {
@@ -18,15 +20,17 @@ const router = createBrowserRouter([
             {
                 path: '/signin',
                 element: (<ProtectedRoute path='/'>
-                    <Signinpage/>
+                    <Signinpage />
                 </ProtectedRoute>)
             },
-            // {
-            //     path: '/signup',
-            //     element: (<ProtectedRoute path='/signin'>
-            //     <Signinuppage/>
-            // </ProtectedRoute>)
-            // },
+            {
+                path: "/signup",
+                element: (
+                    <ProtectedRoute path='/'signin>
+                        <Signuppage />
+                    </ProtectedRoute>
+                ),
+            },
             {
                 path: '/cities',
                 element: <Citiespage />

@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { user_login } from '../store/actions/userAction'
-// import { userReducer } from '../store/reducers/userReducers.js'
+import { Link as LinkRouter } from "react-router-dom"
+
 
 function SignIn() {
  const store = useSelector(store => store.userReducer)
- console.log('Viene del store',store)
+//  console.log('Viene del store',store)
 
   const [formData, setFormData] = useState({
     email: '',
@@ -54,6 +55,7 @@ function SignIn() {
                   onChange={handleInput}
                     type="email"
                     name="email"
+                    placeholder="Enter email"
                     className="block w-full rounded-md border-0 px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -71,6 +73,7 @@ function SignIn() {
                   onChange={handleInput}
                     name="password"
                     type="password"
+                    placeholder="Enter password"
                     className="block w-full rounded-md border-0 px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -80,19 +83,20 @@ function SignIn() {
                 <button
                   type="submit"
                   className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                  // onClick={handleSignIn}
                 >
-                  Sign in
+                  Sign In
                 </button>
               </div>
             </form>
 
-            <p className="mt-10 text-center text-md text-gray-700">
-              Don't have any?{' '}
-              <a href="#" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+            <article className="mt-10 text-center text-md text-gray-700">
+             <p>Don't have any?</p> 
+              <LinkRouter to={'/signup'} >
+              <p className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
                 Create a free account
-              </a>
-            </p>
+              </p>
+              </LinkRouter>
+            </article>
           </div>
         </div>
       </article>

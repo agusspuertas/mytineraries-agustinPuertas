@@ -7,7 +7,7 @@ import { Link as LinkRouter } from "react-router-dom"
 function Header() {
 
   const user = useSelector(store => store.userReducer.user)
-  console.log(user)
+  // console.log(user)
  const defaultPhoto= '/Header_Img/UserLogo.png'
 
  const dispatch = useDispatch();
