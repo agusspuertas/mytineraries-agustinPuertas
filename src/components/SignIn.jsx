@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
-import { user_photo } from '../store/actions/userAction'
-import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux'
+import { user_login } from '../store/actions/userAction'
+// import { userReducer } from '../store/reducers/userReducers.js'
 
 function SignIn() {
+ const store = useSelector(store => store.userReducer)
+ console.log('Viene del store',store)
 
   const [formData, setFormData] = useState({
     email: '',
@@ -24,13 +26,11 @@ function SignIn() {
     event.preventDefault();
 
     try {
-     const {data} = await axios.post('http://localhost:7000/api/auth/signin', formData);
-     console.log(data)
-     localStorage.setItem('token', JSON.stringify(data.response.token))
-     localStorage.setItem('user', JSON.stringify(data.response.user))
-
+      dispatch(user_login({
+        data:formData
+      }))
     } catch (error) {
-        console.error
+        console.log(error)
     }
   }
 
