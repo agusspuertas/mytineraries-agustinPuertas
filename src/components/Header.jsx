@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch,useSelector } from 'react-redux';
+import { user_logout } from '../store/actions/userAction';
 import { Link as LinkRouter } from "react-router-dom"
+
 
 function Header() {
 
@@ -8,6 +10,15 @@ function Header() {
   console.log(user)
  const defaultPhoto= '/Header_Img/UserLogo.png'
 
+ const dispatch = useDispatch();
+
+ const handleSignOut = () => {
+  try {
+      dispatch(user_logout())
+  } catch (error) {
+      console.log(error);
+  }
+}
 
   return (
 
@@ -47,13 +58,19 @@ function Header() {
 
       {/* Login Logo */}
       <div className='justify-end mr-4 flex'>
-
-      <LinkRouter to={'/signin'}>
-        <div className=' mx-2 btn-ghost rounded-lg p-1 hover:bg-[#2659A6] flex'>
-          <p className='font-bold mt-1 mr-2'>{user ? 'Logout' : 'Login'}</p>
-          <img className='w-9 h-auto sm:w-9 ' src={user ? user.foto: defaultPhoto} alt="user logo" />
-        </div>
-      </LinkRouter>
+        {user ? (
+          <div onClick={handleSignOut} className=' mx-2 btn-ghost rounded-lg p-1 hover:bg-[#2659A6] flex'>
+            <p className='font-bold mt-1 mr-2'>Logout</p>
+            <img className='w-9 h-auto sm:w-9 ' src={user.foto} alt="user logo" />
+          </div>
+        ) : (
+          <LinkRouter to={'/signin'}>
+            <div className=' mx-2 btn-ghost rounded-lg p-1 hover:bg-[#2659A6] flex'>
+              <p className='font-bold mt-1 mr-2'>Login</p>
+              <img className='w-9 h-auto sm:w-9 ' src={defaultPhoto} alt="user logo" />
+            </div>
+          </LinkRouter>
+        )}
       </div>
       
     </section>

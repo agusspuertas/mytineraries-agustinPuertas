@@ -33,3 +33,20 @@ export const user_login = createAsyncThunk('user_login', async (obj) => {
 
  
 } )
+
+
+export const user_logout = createAsyncThunk(
+  "user_logout",
+  async (_, { dispatch }) => {
+    try {
+        localStorage.removeItem("token");
+        localStorage.removeItem("user");
+        dispatch(user_logout.fulfilled())
+        console.log("Successful logout");
+    } catch (error) {
+      console.error(error);
+    }
+  }
+ );
+
+
